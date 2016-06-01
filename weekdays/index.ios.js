@@ -6,6 +6,7 @@ var Text = ReactNative.Text;
 var View = ReactNative.View;
 var StyleSheet = ReactNative.StyleSheet;
 
+var DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 // Create a react component
 var Weekdays = React.createClass({
   render: function() {
