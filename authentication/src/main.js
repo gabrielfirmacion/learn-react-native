@@ -6,9 +6,15 @@ var {
   StyleSheet
 } = ReactNative;
 
+var Parse = require('parse/react-native');
+
 var Signin = require('./components/authentication/signin');
 
 module.exports = React.createClass({
+  componentWillMount: function() {
+    Parse.initialize('myAppId','unused');
+    Parse.serverURL = 'https://authentication-react-native.herokuapp.com/parse';
+  },
   render: function() {
     return (
       <View style={styles.container}>

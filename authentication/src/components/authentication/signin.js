@@ -7,6 +7,7 @@ var {
   TextInput
 } = ReactNative;
 
+var Parse = require('parse/react-native');
 var Button = require('../common/button');
 
 module.exports = React.createClass({
@@ -39,7 +40,10 @@ module.exports = React.createClass({
     )
   },
   onPress: function() {
-    // Log the User in
+    Parse.User.logIn(this.state.username, this.state.password,{
+      success: (user) => { console.log(user); },
+      error: (data, error) => { console.log(data, error); }
+    })
   }
 });
 
