@@ -6,11 +6,13 @@ var {
   StyleSheet
 } = ReactNative;
 
+var Signin = require('./components/authentication/signin');
+
 module.exports = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
-        <Text>I am on both iOS and Android!!!</Text>
+        <Signin />
       </View>
     )
   }
